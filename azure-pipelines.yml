@@ -12,6 +12,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
+<<<<<<< HEAD
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core SDK 3.1.300'
@@ -47,4 +48,9 @@ variables:
       arguments: '--no-restore --configuration Release'
       projects: '**/*.csproj'
 
+=======
+steps:
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+>>>>>>> b24cb58072c4ce5ce9c8233ae32259b57d0f8475
 
